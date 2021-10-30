@@ -534,6 +534,10 @@
     color: #eae9e9;
     font-size: 0.2em;
   }
+
+  .footer__container._active {
+    animation: up 1s;
+  }
   
   .footer__container p {
     margin-top: 10px;
