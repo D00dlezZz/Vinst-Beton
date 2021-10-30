@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <title>Винст-Бетон</title>
+</head>
+
+<body id="body">
+    <div class="overlay" id="overlay"></div>
+    <header>
+        <div class="header__container">
+            <div class="header__logo"><img src="./img/Logo.svg" alt="Винст-Бетон логотип"></div>
+            <div class="header__menu">
+                <a href="#services" class="header__item nav">УСЛУГИ</a>
+                <a href="#about" class="header__item nav" >О НАС</a>
+                <a href="#production" class="header__item nav">ПРОИЗВОДСТВО</a>
+                <a href="#contacts" class="header__item nav">КОНТАКТЫ</a>
+            </div>
+
+            <div class="dropdown">
+                <div class="dropdown__btn active" id="dropdown__btn">
+                    <input type="checkbox" class="input"/>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="dropdown__list">
+                    <a href="#services" class="nav" id="nav">УСЛУГИ</a>
+                    <a href="#about" class="nav" id="nav">О НАС</a>
+                    <a href="#production" class="nav" id="nav">ПРОИЗВОДСТВО</a>
+                    <a href="#contacts" class="nav" id="nav">КОНТАКТЫ</a>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="main-container">
+            <h1 class="main__text _anim-items" >ПРОИЗВОДСТВО, ПРОДАЖА, ДОСТАВКА БЕТОННЫХ И РАСТВОРНЫХ СМЕСЕЙ</h1>
+            <div class="main__phone"> +7 (495) 774-57-70 </div>
+        </div>
+    </section>
+
+
+    <section class="services" id="services">
+
+        <div class="services__container">
+
+            <div class="heading__container">
+                <h3 class="heading">УСЛУГИ</h3>
+                <div class="line"></div>
+            </div>
+
+            <div class="services__items">
+
+                <div class="services__item">
+
+                    <div class="item__img"><img src="./img/item1.webp" alt=""></div>
+                    <div class="item__text">
+                        <h4 class="title">Круглосуточные поставки бетона</h4>
+                        <p class="text">Наша компания осуществляет поставки товарного бетона в кратчайшие сроки. Имеется
+                            собственная аттестованная лаборатория.</p>
+                    </div>
+                </div>
+
+
+                <div class="services__item">
+
+                    <div class="item__img"><img src="./img/item2.webp" alt=""></div>
+                    <div class="item__text">
+                        <h4 class="title">Аренда авто бетононасоса</h4>
+                        <p class="text">Перекачка бетона – критически важная операция. Благодаря Scania мы предлагаем
+                            высокую производительность и безотказную работу.</p>
+                    </div>
+                </div>
+
+                <div class="services__item">
+
+                    <div class="item__img"><img src="./img/item3.webp" alt=""></div>
+                    <div class="item__text">
+                        <h4 class="title">Перевалка цемента и щебня</h4>
+                        <p class="text">Полный цикл работ. Поверенные весы. Удобный выезд на шоссе Энтузиастов и МКАД.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="services__item">
+
+                    <div class="item__img"><img src="./img/item4.webp" alt=""></div>
+                    <div class="item__text">
+                        <h4 class="title">Реализация цемента, гравийного и гранитного щебня</h4>
+                        <p class="text">Все материалы имеют высокое качество. Благодаря личному автопарку, происходит
+                            оперативная доставка до клиента.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about" id="about">
+
+
+        <div class="heading__container">
+            <h3 class="heading">О НАС</h3>
+            <div class="line"></div>
+        </div>
+
+        <div class="about__container">
+
+            <p class="about__text">ООО "ВИНСТ-БЕТОН" специализируется на производстве и поставке на объекты
+                строительства широкого ассортимента бетонных и растворных смесей.
+                В планах компании - запуск новых производственных площадей, а также открытие новых перевалок инертных
+                материалов и цемента в черте города Москва.
+                Транспортировка продукции производится парком собственных автобетоносмесителей. Так же предлагаем услуги
+                собственных автобетононасосов и цементовозов. Гарантируем круглосуточную оперативную доставку точно в
+                срок – для Вас мы работаем 24/7.</p>
+
+            <div class="about__video">
+                <video controls>    
+                </video>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="info" id="info">
+        <div class="info__container">
+            <p class="info__item">3 <br> Производственных площадки</p>
+            <p class="info__item">38 <br> Автобетоно смесителей</p>
+            <p class="info__item">2+1 <br>Перевалки щебня и цемента</p>
+            <p class="info__item">280 <br>Суммарная производительность</p>
+            <p class="info__item">2 <br>Бетононасоса от 22 до 63 метров</p>
+        </div>
+    </section>
+
+    <section class="production">
+
+        <div class="heading__container pad" id="production">
+            <h3 class="heading">ПРОИЗВОДСТВО</h3>
+            <div class="line"></div>
+        </div>
+
+        <div class="production__container">
+
+            <div class="production__item">
+                <p class="production__title">РБУ ЗИЛ</p>
+                <a id="firstBtn" class="production__btn" href="#production">подробнее</a>
+            </div>
+
+            <div class="production__item">
+                <p class="production__title">РБУ STETTER</p>
+                <a id="secondBtn" class="production__btn" href="#production">подробнее</a>
+            </div>
+
+            <div class="production__item">
+                <p class="production__title">РБУ РЕУТОВ</p>
+                <a id="thirdBtn" class="production__btn" href="#production">подробнее</a>
+            </div>
+
+            <div class="production__info" id="blockInfo">
+                <button class="closeBtn" id="closeBtn"></button>
+                <div class="block__info">
+                    <p class="info__title"></p>
+                    <p class="info__text"></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="partners" id="partners">
+
+        <div class="heading__container">
+            <h3 class="heading">НАШИ ПАРТНЕРЫ</h3>
+            <div class="line"></div>
+        </div>
+
+        <div class="partners__container">
+            <div class="partners__item"><img src="./img/logoOfPartners/scania.webp" alt="Scania"></div>
+            <div class="partners__item"><img src="./img/logoOfPartners/elkon.webp" alt="Elkon"></div>
+            <div class="partners__item"><img src="./img/logoOfPartners/techres.webp" alt="Techres"></div>
+            <div class="partners__item"><img src="./img/logoOfPartners/liebherr.webp" alt="Liebherr"></div>
+            <div class="partners__item"><img src="./img/logoOfPartners/schwingStetter.webp" alt="schwing Stetter"></div>
+            <div class="partners__item"><img src="./img/logoOfPartners/ugypk.webp" alt="ЮГУПК"></div>
+        </div>
+
+    </section>
+
+    <section class="contacts">
+
+        <div class="heading__container pad" id="contacts">
+            <h3 class="heading">КОНТАКТЫ</h3>
+            <div class="line"></div>
+        </div>
+
+        <div class="contacts__container">
+
+            <div class="contacts__info">
+                <div class="contacts__main-info">
+                    <h4>МОСКВА</h4>
+                    <p>Офис: ул. Автозаводская 23А, к. 2, офис 305</p>
+                    <p>По всем вопросам можно обращаться на почту: <a
+                            href="mailto:info@vinst-beton.ru">info@vinst-beton.ru</a></p>
+                    <p>Телефон: +7 (495) 774-57-70</p>
+                </div>
+                <div class="contacts__address">
+                    <h5>Производство:</h5>
+                    <a target="_blank"
+                        href="https://yandex.ru/maps/21621/reutov/house/prospekt_mira_36a/Z04YfgFoTEUPQFtvfXt2cXllbA==/?ll=37.868507%2C55.770568&z=16.87">РБУ
+                        Реутов: г. Реутов, Проспект Мира д. 36А</a>
+                    <a target="_blank"
+                        href="https://yandex.ru/maps/213/moscow/house/ulitsa_kirpichnyye_vyyemki_14s4/Z04YcAZhSUcDQFtvfXl5cnRlYg==/?ll=37.611024%2C55.583866&z=16.87">Завод
+                        STETTER: Кирпичные Выемки д.14 к.4</ф>
+                    <a target="_blank"
+                            href="https://yandex.ru/maps/213/moscow/house/avtozavodskaya_ulitsa_23s436/Z04YcARkSEIEQFtvfXp5eH9jbQ==/?ll=37.634173%2C55.689309&z=16.87">РБУ
+                            ЗИЛ: ул. Автозаводская 23, стр. 436</a>
+                </div>
+            </div>
+            <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A4ef110feda8a0cfc2f59cddc21fc2d818bfcca365127a5be1c08d2a6a546f36f&amp;source=constructor"
+                frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer__container">
+            <p>По всем вопросам звоните по телефону:<br> <p class="footer__phone">+7 (495) 774-57-70</p></p>
+            <a href="mailto:info@vinst-beton.ru">info@vinst-beton.ru</a>
+            <p>© 2021 ООО "ВЕДИС-ГРУПП"</p>
+        </div>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
