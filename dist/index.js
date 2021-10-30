@@ -6,6 +6,43 @@ const closeBtn = document.getElementById('closeBtn');
 const overlay = document.getElementById('overlay');
 const body = document.getElementById('body');
 const dropdownBtn = document.getElementById('dropdown__btn');
+const animItems = document.querySelectorAll('._anim-items');
+
+if (animItems.length > 0) {
+    window.addEventListener('scroll', animOnScroll);
+    function animOnScroll() {
+        for (let index = 0; index < animItems.length; index++) {
+            const animItem = animItems[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+            if (animItemHeight > innerHeight) {
+                animItemPoint = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if ((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
+                animItem.classList.add("_active");
+            } else {
+                if (!animItem.classList.contains("_anim-no-hide")) {
+                    animItem.classList.remove("_active");
+                }
+            }
+        }
+    }
+
+    function offset(el) {
+        const rect = el.getBoundingClientRect(),
+            scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft || 0;
+            scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+    }
+    setTimeout(() => {
+        animOnScroll();
+    }, 300)
+}
 
 
 
@@ -37,7 +74,7 @@ aboutBtn.forEach((event) => {
 
 closeBtn.addEventListener('click', () => {
     blockInfo.style.animation = 'down 0.7s';
-    setTimeout(() => {overlay.style.display = 'none',blockInfo.style.display = "none", body.style.overflow = "scroll"}, 700)
+    setTimeout(() => { overlay.style.display = 'none', blockInfo.style.display = "none", body.style.overflow = "scroll" }, 700)
 })
 
 
@@ -51,9 +88,9 @@ dropdownBtn.addEventListener('click', () => {
         body.style.overflow = 'hidden';
         dropdownBtn.classList.remove("active");
 
-    }else {
+    } else {
         document.querySelector(".dropdown__list").style.display = 'none';
-       overlay.style.display = 'none'
+        overlay.style.display = 'none'
         body.style.overflow = 'scroll';
         dropdownBtn.classList.add("active");
         document.querySelector(".input").checked = false;
@@ -75,7 +112,7 @@ for (let smoothLink of smoothLinks) {
     });
 };
 
-    
+
 smoothLinks.forEach((element) => {
     element.addEventListener("click", () => {
         document.querySelector(".input").checked = false;
@@ -85,38 +122,3 @@ smoothLinks.forEach((element) => {
         body.style.overflow = 'scroll';
     })
 })
-
-
-const animItems = document.querySelectorAll('_anim-items');
-
-if (animItems.length > 0) {
-    window.addEventListener('scroll', animOnScroll)
-    function animOnScroll(){
-        for (let index = 0; index < animItems.length; index++) {
-            const animItem = animItems[index];
-            const animItemHeight = animItem.offsetHeught;
-            const animItemOffset = offset(animItem).top;
-            const animStart = 4;
-
-
-            let animItemPoint = window.innerHeight - animItemHeight / animStart;
-            if(animItemHeight > innerHeight) {
-                animItemPoint = window.innerHeight - window.innerHeight / animStart;
-            }
-
-            if((window.scrollY > animItemOffset - animItemPoint) && window.scrollY < (animItemOffset + animItemHeight)){
-                animItem.classList.add('_active');
-            }else {
-                animItem.classList.remove('_active');
-            }
-        }
-    }
-
-    function offset(el) {
-        const rect = el.getBoundingClientRect(),
-            scrollLeft = window.scrollX || document.documentElement.scrollLeft,
-            scrollTop = window.scrollY || document.documentElement.scrollTop;
-        return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-    }
-    animOnScroll();
-}
