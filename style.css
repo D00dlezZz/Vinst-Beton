@@ -106,6 +106,15 @@
     letter-spacing: 0.09em;
     color: #eae9e9;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+  }
+
+  .main__phone._active {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    transition: all 0.8s ease 0.4s;
   }
   
   
@@ -125,6 +134,10 @@
     font-style: normal;
     font-weight: 600;
     margin-bottom: 10px;
+  }
+
+  .heading__container._active {
+    animation: slide 1s;
   }
   
   .services__items {
@@ -148,7 +161,33 @@
   
   .item__text {
     padding-left: 20px;
+    transform: translate(0px 50%);
+    opacity: 0;
+    transition: all 0.3s ease 0s;
   }
+
+  .item__img {
+    transform: scale(0);
+    transition: all 0.8s ease 0s;
+  }
+
+  .item__img img {
+    border-radius: 10px;
+    width: 2em;
+    height: 1.8em;
+
+  }
+
+  .services__item._active .item__img {
+    transform: scale(1);
+  }
+
+ .services__item._active .item__text {
+    transform: translate(0px 0px);
+    opacity: 1;
+    transition: all 0.8s ease 0.6s;
+  }
+
   
   .title {
     font-size: 0.19em;
@@ -159,13 +198,7 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 0.17em;
   }
-  
-  .item__img img {
-    border-radius: 10px;
-    width: 2em;
-    height: 1.8em;
-  }
-  
+   
   .about {
     padding: 1.7em 1em;
   }
