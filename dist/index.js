@@ -9,7 +9,6 @@ const dropdownBtn = document.getElementById('dropdown__btn');
 const animItems = document.querySelectorAll('._anim-items');
 
 
-
 if (animItems.length > 0) {
     window.addEventListener('scroll', animOnScroll);
     function animOnScroll() {
