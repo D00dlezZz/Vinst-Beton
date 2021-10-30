@@ -8,6 +8,8 @@ const body = document.getElementById('body');
 const dropdownBtn = document.getElementById('dropdown__btn');
 const animItems = document.querySelectorAll('._anim-items');
 
+
+
 if (animItems.length > 0) {
     window.addEventListener('scroll', animOnScroll);
     function animOnScroll() {
@@ -73,8 +75,8 @@ aboutBtn.forEach((event) => {
 
 
 closeBtn.addEventListener('click', () => {
-    blockInfo.style.animation = 'down 0.7s';
-    setTimeout(() => { overlay.style.display = 'none', blockInfo.style.display = "none", body.style.overflow = "scroll" }, 700)
+    // blockInfo.style.animation = 'down 1s';
+   overlay.style.display = 'none', blockInfo.style.display = "none", body.style.overflow = "scroll" 
 })
 
 
