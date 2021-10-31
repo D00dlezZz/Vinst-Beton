@@ -73,8 +73,8 @@ aboutBtn.forEach((event) => {
 
 closeBtn.addEventListener('click', () => {
     overlay.style.display = 'none',
-    blockInfo.style.display = "none",
-    body.style.overflow = "scroll"
+     blockInfo.style.display = "none",
+      body.style.overflow = "scroll"
 })
 
 
@@ -83,13 +83,13 @@ dropdownBtn.addEventListener('click', () => {
     document.querySelector(".input").checked = true;
 
     if (dropdownBtn.classList.contains("active")) {
-        document.querySelector(".dropdown__list").classList.add("active")
+        document.querySelector(".dropdown__list").style.display = 'flex';
         overlay.style.display = 'block';
         body.style.overflow = 'hidden';
         dropdownBtn.classList.remove("active");
 
     } else {
-        document.querySelector(".dropdown__list").classList.remove("active")
+        document.querySelector(".dropdown__list").style.display = 'none';
         overlay.style.display = 'none'
         body.style.overflow = 'scroll';
         dropdownBtn.classList.add("active");
@@ -112,9 +112,11 @@ jQuery(document).ready(function ($) {
 
 smoothLinks.forEach((element) => {
     element.addEventListener("click", () => {
-        document.querySelector(".dropdown__list").classList.remove("active")
+
+
         document.querySelector(".input").checked = false;
         dropdownBtn.classList.add("active");
+        document.querySelector(".dropdown__list").style.display = 'none';
         overlay.style.display = 'none';
         body.style.overflow = 'scroll';
     })
