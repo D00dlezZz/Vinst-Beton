@@ -85,6 +85,7 @@ dropdownBtn.addEventListener('click', () => {
 
     if (dropdownBtn.classList.contains("active")) {
         document.querySelector(".dropdown__list").style.display = 'flex';
+        // document.querySelector(".dropdown__list").
         overlay.style.display = 'block';
         body.style.overflow = 'hidden';
         dropdownBtn.classList.remove("active");

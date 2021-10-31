@@ -13,9 +13,9 @@ body {
 }
 
 ._anim-show {
-  -webkit-transform: translate(0px, 100%);
-      -ms-transform: translate(0px, 100%);
-          transform: translate(0px, 100%);
+  -webkit-transform: translate(100%, 0px);
+      -ms-transform: translate(100%, 0px);
+          transform: translate(100%, 0px);
   opacity: 0;
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
@@ -798,8 +798,8 @@ footer {
 }
 
 .nav {
-  -webkit-animation: slide 1s;
-          animation: slide 1s;
+  -webkit-animation: all slide 1s;
+          animation: all slide 1s;
 }
 }
 
@@ -965,6 +965,7 @@ footer {
 
   .footer__phone {
     font-size: 2.6em;
+    -webkit-text-size-adjust: 100%;
   }
 
   .pad {
