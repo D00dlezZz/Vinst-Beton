@@ -108,7 +108,8 @@ for (let smoothLink of smoothLinks) {
 
         document.querySelector(id).scrollIntoView({
             behavior: 'smooth',
-            block: 'start'
+            block: 'start',
+            scrolling: 'touch',
         });
     });
 };
