@@ -121,6 +121,7 @@ header {
 }
 
 .main__phone {
+  display: block;
   text-align: center;
   padding-top: 10px;
   font-style: normal;
