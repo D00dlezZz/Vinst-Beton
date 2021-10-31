@@ -101,22 +101,20 @@ dropdownBtn.addEventListener('click', () => {
 
 const smoothLinks = document.querySelectorAll('.nav');
 
-for (let smoothLink of smoothLinks) {
-    smoothLink.addEventListener('click', function (e) {
+jQuery(document).ready(function($){
+    $("a.nav").on("click", function(e){
         e.preventDefault();
-        const id = smoothLink.getAttribute('href');
-
-        document.querySelector(id).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            scrolling: 'touch',
-        });
+        var anchor = $(this).attr('href');
+        $('html, body').stop().animate({
+            scrollTop: $(anchor).offset().top - 60
+        }, 1000);
     });
-};
-
+  });
 
 smoothLinks.forEach((element) => {
     element.addEventListener("click", () => {
+
+
         document.querySelector(".input").checked = false;
         dropdownBtn.classList.add("active");
         document.querySelector(".dropdown__list").style.display = 'none';
@@ -124,3 +122,6 @@ smoothLinks.forEach((element) => {
         body.style.overflow = 'scroll';
     })
 })
+
+
+
