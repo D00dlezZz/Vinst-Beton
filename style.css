@@ -13,9 +13,9 @@ body {
 }
 
 ._anim-show {
-  -webkit-transform: translate(0px, 100%);
-      -ms-transform: translate(0px, 100%);
-          transform: translate(0px, 100%);
+  -webkit-transform: translate(0px, 50%);
+      -ms-transform: translate(0px, 50%);
+          transform: translate(0px, 50%);
   opacity: 0;
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
@@ -530,6 +530,7 @@ video {
   -webkit-box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .contacts__info._active {
   -webkit-animation: slide 1s;
           animation: slide 1s;
@@ -701,6 +702,7 @@ footer {
         -ms-flex-pack: center;
             justify-content: center;
     z-index: 2;
+    -webkit-animation: slide 1s;
   }
 
   .dropdown__list a {
