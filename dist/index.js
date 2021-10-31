@@ -37,7 +37,7 @@ if (animItems.length > 0) {
     function offset(el) {
         const rect = el.getBoundingClientRect(),
             scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft || 0;
-            scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
+        scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
         return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
     }
     setTimeout(() => {
@@ -53,8 +53,6 @@ aboutBtn.forEach((event) => {
         blockInfo.style.display = "block";
         overlay.style.display = 'block';
         body.style.overflow = 'hidden';
-        blockInfo.style.animation = 'up 1s'
-
         if (event.id === 'firstBtn') {
             infoTitle.innerText = "РБУ ЗИЛ: ул. Автозаводская 23, стр. 436";
             infoText.innerText = "Производственная площадка расположена в центре Москвы. Удобный выезд на ТТК и центральные автомагистрали Юга Москвы. На данной площадке расположены РБУ Liebherr и Elkon. Суммарная производительность которых составляет более 170 кубометров готовой продукции. Площадка включает большие склады сыпучих материалов. На площадке располагается собственная лаборатория и зона технического обслуживания своего парка АБС."
@@ -74,8 +72,9 @@ aboutBtn.forEach((event) => {
 
 
 closeBtn.addEventListener('click', () => {
-    // blockInfo.style.animation = 'down 1s';
-   overlay.style.display = 'none', blockInfo.style.display = "none", body.style.overflow = "scroll" 
+    overlay.style.display = 'none',
+    blockInfo.style.display = "none",
+    body.style.overflow = "scroll"
 })
 
 
@@ -84,13 +83,13 @@ dropdownBtn.addEventListener('click', () => {
     document.querySelector(".input").checked = true;
 
     if (dropdownBtn.classList.contains("active")) {
-        document.querySelector(".dropdown__list").style.display = 'flex';
+        document.querySelector(".dropdown__list").classList.add("active")
         overlay.style.display = 'block';
         body.style.overflow = 'hidden';
         dropdownBtn.classList.remove("active");
 
     } else {
-        document.querySelector(".dropdown__list").style.display = 'none';
+        document.querySelector(".dropdown__list").classList.remove("active")
         overlay.style.display = 'none'
         body.style.overflow = 'scroll';
         dropdownBtn.classList.add("active");
@@ -101,27 +100,24 @@ dropdownBtn.addEventListener('click', () => {
 
 const smoothLinks = document.querySelectorAll('.nav');
 
-jQuery(document).ready(function($){
-    $("a.nav").on("click", function(e){
+jQuery(document).ready(function ($) {
+    $("a.nav").on("click", function (e) {
         e.preventDefault();
         var anchor = $(this).attr('href');
         $('html, body').stop().animate({
             scrollTop: $(anchor).offset().top - 60
         }, 1000);
     });
-  });
+});
 
 smoothLinks.forEach((element) => {
     element.addEventListener("click", () => {
-
-
+        document.querySelector(".dropdown__list").classList.remove("active")
         document.querySelector(".input").checked = false;
         dropdownBtn.classList.add("active");
-        document.querySelector(".dropdown__list").style.display = 'none';
         overlay.style.display = 'none';
         body.style.overflow = 'scroll';
     })
 })
-
 
 
