@@ -10,7 +10,7 @@
 body {
   background-color: #373b40;
   font-family: "Montserrat", sans-serif;
-  overflow-y: scroll;
+  overflow: scroll;
   /* -webkit-overflow-scrolling: touch; */
 }
 
@@ -406,7 +406,7 @@ video {
 }
 
 .production__info {
-  display: none;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -421,8 +421,21 @@ video {
   padding: 0.5em;
   overflow: auto;
   z-index: 1;
-  -webkit-animation: up 1s ease;
-  
+  transform: translate(0px, 100%);
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.production__info.active {
+  pointer-events:unset;
+  opacity: 1;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+      transform: translate(0px, 0px);
+-webkit-transition: all 0.8s ease 0.4s;
+-o-transition: all 0.8s ease 0.4s;
+transition: all 0.8s ease 0.1s;
 }
 
 .overlay {
@@ -535,13 +548,13 @@ video {
 }
 
 .contacts__info {
-  top: 3em;
+  top: 30%;
   left: 50px;
   position: absolute;
   background-color: #ffffff;
   border-radius: 10px;
   width: 6em;
-  height: 7.5em;
+  min-height: 7.3em;
   padding: 40px;
   -webkit-box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -557,7 +570,7 @@ video {
           transform: translate(0px, 0px);
   -webkit-transition: all 0.8s ease 0.4s;
   -o-transition: all 0.8s ease 0.4s;
-  transition: all 0.8s ease 0.1s;
+  transition: all 0.8s ease 0.4s;
 }
 
 .contacts__main-info p {
@@ -625,11 +638,19 @@ footer {
   text-align: center;
   color: #eae9e9;
   font-size: 0.4em;
+  opacity: 0;
+  transform: translate(0px, 100%);
+  transition: all 0.8s ease 0s;
 }
 
 .footer__container._active {
-  -webkit-animation: up 1s;
-          animation: up 1s;
+  opacity: 1;
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  -webkit-transition: all 0.8s ease 0.4s;
+  -o-transition: all 0.8s ease 0.4s;
+  transition: all 0.8s ease 0.4s;
 }
 
 .footer__container p {
@@ -716,7 +737,7 @@ footer {
   }
 
   .dropdown__list {
-    display: none;
+    display: flex;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -724,7 +745,6 @@ footer {
     right: 0;
     top: 20vh;
     width: 300px;
-    /* height: 300px; */
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -736,8 +756,23 @@ footer {
         -ms-flex-pack: center;
             justify-content: center;
     z-index: 2;
-    -webkit-animation: slide 1s ease;
+    transform: translate(-100%, 0px);
+    transition: all 0.2s ease 0s;
+    opacity: 0;
+    pointer-events: none;
   }
+
+  .dropdown__list.active {
+    pointer-events:unset;
+    opacity: 1;
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+-webkit-transition: all 0.8s ease 0.4s;
+-o-transition: all 0.8s ease 0.4s;
+transition: all 0.8s ease 0.1s;
+  }
+
 
   .dropdown__list a {
     text-decoration: none;
@@ -834,11 +869,7 @@ footer {
           transform: rotate(45deg) translate(0, 0);
 }
 
-.nav {
-  -webkit-animation: all slide 1s;
-          animation: all slide 1s;
-}
-}
+
 
 @media screen and (max-width: 767px) {
   body {
@@ -974,10 +1005,33 @@ footer {
     display: none;
   }
 
+  .contacts__container {
+    width: 100%;
+    min-height: 7em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+opacity: 0;
+transform: translate(0px, 50%);
+transition: all 0.8s ease 0s;
+  }
+
+  .contacts__container._active {
+    opacity: 1;
+    -webkit-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    -webkit-transition: all 0.8s ease 0.4s;
+    -o-transition: all 0.8s ease 0.4s;
+    transition: all 0.8s ease 0.1s;
+  }
+
   .contacts__info {
     position: static;
-    width: 100%;
-    height: 7.5em;
+    background-color: unset;
+    align-items: center;
+    justify-content: center;
     padding: 30px;
     font-size: 2em;
     -webkit-box-shadow: none;
@@ -1002,25 +1056,4 @@ footer {
 
 }
 
-@-webkit-keyframes slide {
-  0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-@-webkit-keyframes up {
-  0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-}
 
