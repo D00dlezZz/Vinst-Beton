@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #373b40;
+  background-color: #2F353D;
   font-family: "Montserrat", sans-serif;
   overflow: scroll;
   /* -webkit-overflow-scrolling: touch; */
@@ -90,7 +90,7 @@ header {
 }
 
 .main {
-  background: url(./img/first-sec-bckg.png) 100% 100% no-repeat;
+  background: url(./img/backgrounds/main-bckg.png) 100% 100% no-repeat;
   background-size: cover;
   padding: 1.7em 1em;
 }
@@ -301,12 +301,12 @@ video {
     50% 47.35%,
     100% 47.32%,
     #797979 0%,
-    #373b40 100%
+    #2F353D 100%
   );
   background: radial-gradient(
     100% 47.32% at 50% 47.35%,
     #797979 0%,
-    #373b40 100%
+    #2F353D 100%
   );
 }
 
@@ -356,7 +356,7 @@ video {
           align-items: center;
   height: 30vw;
   color: #eae9e9;
-  background: url(./img/ba8fb2_2e364b10cf19457abcdf30861955aa75~mv2\ 2.webp)
+  background: url(./img/backgrounds/production-bckg.webp)
     100% 100% no-repeat;
   background-size: cover;
 }
