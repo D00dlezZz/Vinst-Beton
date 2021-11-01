@@ -470,6 +470,7 @@ video {
   position: relative;
   min-width: 50%;
   padding-left: 10px;
+  
 }
 
 .embla__slide__inner {
@@ -488,6 +489,7 @@ video {
   min-width: 100%;
   max-width: none;
   transform: translate(-55%, -55%);
+
 }
 
 .embla__button {
@@ -497,7 +499,7 @@ video {
   touch-action: manipulation;
   position: absolute;
   z-index: 1;
-  top: 30%;
+  top: 40%;
   transform: translateY(-50%);
   border: 0;
   width: 30px;
@@ -548,8 +550,8 @@ video {
 
 .closeBtn {
   position: absolute;
-  top: 5px;
-  right: 20px;
+  top: 0.2em;
+  right: 0.5em;
   width: 25px;
   height: 25px;
   cursor: pointer;
@@ -561,11 +563,12 @@ video {
 .closeBtn:after {
   content: "";
   position: absolute;
-  top: 21px;
-  left: 10px;
-  width: 20px;
+  top: 0.1em;
+  left: 0.3em;
+  width: 0.3em;
   height: 4px;
   background: #CBCBCB;
+  
 }
 
 .closeBtn:before {
@@ -1064,6 +1067,17 @@ footer {
       padding: 1em 0;
     }
 
+    .embla__container {
+      display: none;
+    }
+    .embla__button {
+      display: none;
+    }
+
+    .embla__button {
+      display: none;
+    }
+
     .production__item {
       font-size: 2em;
       padding-top: 0.25em;
@@ -1072,7 +1086,7 @@ footer {
     }
 
     .production__info {
-      width: 90%;
+      width: 80%;
       height: 110vw;
       font-size: 2.6em;
       padding: 0.2em;
@@ -1109,7 +1123,8 @@ footer {
       background-color: unset;
       align-items: center;
       justify-content: center;
-      padding: 30px;
+      padding: 20px;
+      width: 100%;
       font-size: 2em;
       -webkit-box-shadow: none;
       box-shadow: none;
