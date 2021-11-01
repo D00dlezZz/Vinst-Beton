@@ -7,6 +7,7 @@ const overlay = document.getElementById('overlay');
 const body = document.getElementById('body');
 const dropdownBtn = document.getElementById('dropdown__btn');
 const animItems = document.querySelectorAll('._anim-items');
+const smoothLinks = document.querySelectorAll('.nav');
 
 
 if (animItems.length > 0) {
@@ -48,10 +49,9 @@ if (animItems.length > 0) {
 
 
 aboutBtn.forEach((event) => {
-
     event.addEventListener('click', () => {
         blockInfo.style.display = "block";
-        overlay.style.display = 'block';
+        overlay.style.display = "block";
         body.style.overflow = 'hidden';
         if (event.id === 'firstBtn') {
             infoTitle.innerText = "РБУ ЗИЛ: ул. Автозаводская 23, стр. 436";
@@ -73,8 +73,8 @@ aboutBtn.forEach((event) => {
 
 closeBtn.addEventListener('click', () => {
     overlay.style.display = 'none',
-     blockInfo.style.display = "none",
-      body.style.overflow = "scroll"
+    blockInfo.style.display = "none",
+    body.style.overflow = "scroll"
 })
 
 
@@ -98,8 +98,6 @@ dropdownBtn.addEventListener('click', () => {
     }
 })
 
-const smoothLinks = document.querySelectorAll('.nav');
-
 jQuery(document).ready(function ($) {
     $("a.nav").on("click", function (e) {
         e.preventDefault();
@@ -112,8 +110,6 @@ jQuery(document).ready(function ($) {
 
 smoothLinks.forEach((element) => {
     element.addEventListener("click", () => {
-
-
         document.querySelector(".input").checked = false;
         dropdownBtn.classList.add("active");
         document.querySelector(".dropdown__list").style.display = 'none';
