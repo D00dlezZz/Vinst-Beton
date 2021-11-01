@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "embla-carousel": "^5.0.1",
     "gh-pages": "^3.2.3",
     "smooth-scroll": "^16.1.3",
     "smoothscroll-polyfill": "^0.4.4"
