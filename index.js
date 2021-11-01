@@ -10,6 +10,7 @@ const animItems = document.querySelectorAll('._anim-items');
 const smoothLinks = document.querySelectorAll('.nav');
 
 
+
 if (animItems.length > 0) {
     window.addEventListener('scroll', animOnScroll);
     function animOnScroll() {
@@ -58,7 +59,7 @@ aboutBtn.forEach((event) => {
             infoText.innerText = "Производственная площадка расположена в центре Москвы. Удобный выезд на ТТК и центральные автомагистрали Юга Москвы. На данной площадке расположены РБУ Liebherr и Elkon. Суммарная производительность которых составляет более 170 кубометров готовой продукции. Площадка включает большие склады сыпучих материалов. На площадке располагается собственная лаборатория и зона технического обслуживания своего парка АБС."
 
         } else if (event.id === 'secondBtn') {
-            infoTitle.innerText = "РБУ ВАРШАВКА: Кирпичные Выемки д.14 к.4";
+            infoTitle.innerText = "РБУ АНИНО: Кирпичные Выемки д.14 к.4";
             infoText.innerText = "Производственная площадка расположена в центре Москвы. Удобный выезд на ТТК и центральные автомагистрали Юга Москвы. На данной площадке расположены РБУ Liebherr и Elkon. Суммарная производительность которых составляет более 170 кубометров готовой продукции. Площадка включает большие склады сыпучих материалов. На площадке располагается собственная лаборатория и зона технического обслуживания своего парка АБС."
 
         } else {
@@ -117,5 +118,37 @@ smoothLinks.forEach((element) => {
         body.style.overflow = 'scroll';
     })
 })
+
+
+const setupPrevNextBtns = (prevBtn, nextBtn, embla) => {
+    prevBtn.addEventListener('click', embla.scrollPrev, false);
+    nextBtn.addEventListener('click', embla.scrollNext, false);
+  };
+  
+const disablePrevNextBtns = (prevBtn, nextBtn, embla) => {
+    return () => {
+      if (embla.canScrollPrev()) prevBtn.removeAttribute('disabled');
+      else prevBtn.setAttribute('disabled', 'disabled');
+  
+      if (embla.canScrollNext()) nextBtn.removeAttribute('disabled');
+      else nextBtn.setAttribute('disabled', 'disabled');
+    };
+  };
+  
+const wrap = document.querySelector(".embla");
+const viewPort = wrap.querySelector(".embla__viewport");
+const prevBtn = wrap.querySelector(".embla__button--prev");
+const nextBtn = wrap.querySelector(".embla__button--next");
+const embla = EmblaCarousel(viewPort, {
+  dragFree: true,
+  containScroll: "trimSnaps"
+});
+const disablePrevAndNextBtns = disablePrevNextBtns(prevBtn, nextBtn, embla);
+
+setupPrevNextBtns(prevBtn, nextBtn, embla);
+
+embla.on("select", disablePrevAndNextBtns);
+embla.on("init", disablePrevAndNextBtns);
+
 
 
