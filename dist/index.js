@@ -50,7 +50,7 @@ if (animItems.length > 0) {
 
 aboutBtn.forEach((event) => {
     event.addEventListener('click', () => {
-        blockInfo.style.display = "block";
+        blockInfo.classList.add("active");
         overlay.style.display = "block";
         body.style.overflow = 'hidden';
         if (event.id === 'firstBtn') {
@@ -73,7 +73,7 @@ aboutBtn.forEach((event) => {
 
 closeBtn.addEventListener('click', () => {
     overlay.style.display = 'none',
-    blockInfo.style.display = "none",
+    blockInfo.classList.remove("active");
     body.style.overflow = "scroll"
 })
 
@@ -83,13 +83,13 @@ dropdownBtn.addEventListener('click', () => {
     document.querySelector(".input").checked = true;
 
     if (dropdownBtn.classList.contains("active")) {
-        document.querySelector(".dropdown__list").style.display = 'flex';
+        document.querySelector(".dropdown__list").classList.add("active");
         overlay.style.display = 'block';
         body.style.overflow = 'hidden';
         dropdownBtn.classList.remove("active");
 
     } else {
-        document.querySelector(".dropdown__list").style.display = 'none';
+        document.querySelector(".dropdown__list").classList.remove("active");
         overlay.style.display = 'none'
         body.style.overflow = 'scroll';
         dropdownBtn.classList.add("active");
@@ -112,7 +112,7 @@ smoothLinks.forEach((element) => {
     element.addEventListener("click", () => {
         document.querySelector(".input").checked = false;
         dropdownBtn.classList.add("active");
-        document.querySelector(".dropdown__list").style.display = 'none';
+        document.querySelector(".dropdown__list").classList.remove("active")
         overlay.style.display = 'none';
         body.style.overflow = 'scroll';
     })
