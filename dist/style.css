@@ -60,10 +60,6 @@ header {
   align-items: center;
 }
 
-.header__logo img {
-  width: 2em;
-}
-
 .header__menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -551,7 +547,7 @@ video {
 .closeBtn {
   position: absolute;
   top: 0.2em;
-  right: 0.5em;
+  right: 0.6em;
   width: 25px;
   height: 25px;
   cursor: pointer;
