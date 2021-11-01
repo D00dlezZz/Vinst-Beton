@@ -54,7 +54,23 @@ aboutBtn.forEach((event) => {
         blockInfo.classList.add("active");
         overlay.style.display = "block";
         body.style.overflow = 'hidden';
+
+        const zilImg = [
+            "./img/item1.webp",
+            "./img/item2.webp",
+            "./img/item3.webp",
+            "./img/item4.webp",
+            "./img/item1.webp",
+        ]
+
         if (event.id === 'firstBtn') {
+
+            for(let index = 0; index < zilImg.length; index++) {
+                document.querySelectorAll(".embla__slide__img").forEach((el) => {
+                    el.setAttribute('src', zilImg[index]) 
+                })
+            }
+
             infoTitle.innerText = "РБУ ЗИЛ: ул. Автозаводская 23, стр. 436";
             infoText.innerText = "Производственная площадка расположена в центре Москвы. Удобный выезд на ТТК и центральные автомагистрали Юга Москвы. На данной площадке расположены РБУ Liebherr и Elkon. Суммарная производительность которых составляет более 170 кубометров готовой продукции. Площадка включает большие склады сыпучих материалов. На площадке располагается собственная лаборатория и зона технического обслуживания своего парка АБС."
 
