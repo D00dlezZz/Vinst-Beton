@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #373b40;
+  background-color: #2F353D;
   font-family: "Montserrat", sans-serif;
   overflow: scroll;
   /* -webkit-overflow-scrolling: touch; */
@@ -301,12 +301,12 @@ video {
     50% 47.35%,
     100% 47.32%,
     #797979 0%,
-    #373b40 100%
+    #2F353D 100%
   );
   background: radial-gradient(
     100% 47.32% at 50% 47.35%,
     #797979 0%,
-    #373b40 100%
+    #2F353D 100%
   );
 }
 
