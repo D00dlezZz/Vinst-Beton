@@ -448,6 +448,7 @@ transition: all 0.8s ease 0.1s;
 }
 
 .info__title {
+  font-weight: 600;
   font-size: 0.3em;
   padding-bottom: 0.5em;
 }
