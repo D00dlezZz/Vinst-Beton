@@ -601,7 +601,7 @@ iframe {
 
 .contacts__main-info h4 {
   font-size: 0.35em;
-  padding-bottom: 20px;
+  padding-bottom: 0.4em;
 }
 
 .contacts__main-info {
@@ -614,7 +614,7 @@ iframe {
 
 .contacts__address h5 {
   font-size: 0.32em;
-  padding-bottom: 0.7em;
+  padding-bottom: 0.4em;
 }
 
 .contacts__address a {
