@@ -57,20 +57,29 @@ aboutBtn.forEach((event) => {
 
         const zilImg = [
             "./img/item1.webp",
-            "./img/item2.webp",
-            "./img/item3.webp",
-            "./img/item4.webp",
+            "./img/item1.webp",
+            "./img/item1.webp",
+            "./img/item1.webp",
             "./img/item1.webp",
         ]
 
+        const anImg = [
+            "./img/item2.webp",
+            "./img/item2.webp",
+            "./img/item2.webp",
+            "./img/item2.webp",
+            "./img/item2.webp",
+        ]
+
+        const relImg = [
+            "./img/item3.webp",
+            "./img/item3.webp",
+            "./img/item3.webp",
+            "./img/item3.webp",
+            "./img/item3.webp",
+        ]
+
         if (event.id === 'firstBtn') {
-
-            for(let index = 0; index < zilImg.length; index++) {
-                document.querySelectorAll(".embla__slide__img").forEach((el) => {
-                    el.setAttribute('src', zilImg[index]) 
-                })
-            }
-
             infoTitle.innerText = "РБУ ЗИЛ: ул. Автозаводская 23, стр. 436";
             infoText.innerText = "Производственная площадка расположена в центре Москвы. Удобный выезд на ТТК и центральные автомагистрали Юга Москвы. На данной площадке расположены РБУ Liebherr и Elkon. Суммарная производительность которых составляет более 170 кубометров готовой продукции. Площадка включает большие склады сыпучих материалов. На площадке располагается собственная лаборатория и зона технического обслуживания своего парка АБС."
 
@@ -115,16 +124,6 @@ dropdownBtn.addEventListener('click', () => {
     }
 })
 
-jQuery(document).ready(function ($) {
-    $("a.nav").on("click", function (e) {
-        e.preventDefault();
-        var anchor = $(this).attr('href');
-        $('html, body').stop().animate({
-            scrollTop: $(anchor).offset().top - 60
-        }, 1000);
-    });
-});
-
 smoothLinks.forEach((element) => {
     element.addEventListener("click", () => {
         document.querySelector(".input").checked = false;
@@ -136,35 +135,19 @@ smoothLinks.forEach((element) => {
 })
 
 
-const setupPrevNextBtns = (prevBtn, nextBtn, embla) => {
-    prevBtn.addEventListener('click', embla.scrollPrev, false);
-    nextBtn.addEventListener('click', embla.scrollNext, false);
-  };
-  
-const disablePrevNextBtns = (prevBtn, nextBtn, embla) => {
-    return () => {
-      if (embla.canScrollPrev()) prevBtn.removeAttribute('disabled');
-      else prevBtn.setAttribute('disabled', 'disabled');
-  
-      if (embla.canScrollNext()) nextBtn.removeAttribute('disabled');
-      else nextBtn.setAttribute('disabled', 'disabled');
-    };
-  };
-  
-const wrap = document.querySelector(".embla");
-const viewPort = wrap.querySelector(".embla__viewport");
-const prevBtn = wrap.querySelector(".embla__button--prev");
-const nextBtn = wrap.querySelector(".embla__button--next");
-const embla = EmblaCarousel(viewPort, {
-  dragFree: true,
-  containScroll: "trimSnaps"
+jQuery(document).ready(function ($) {
+    $("a.nav").on("click", function (e) {
+        e.preventDefault();
+        var anchor = $(this).attr('href');
+        $('html, body').stop().animate({
+            scrollTop: $(anchor).offset().top - 60
+        }, 1000);
+    });
+    $(".carousel.carousel-slider").carousel({
+        indicators: true,
+        fullWidth: true,
+        duration: 200
+    })
 });
-const disablePrevAndNextBtns = disablePrevNextBtns(prevBtn, nextBtn, embla);
-
-setupPrevNextBtns(prevBtn, nextBtn, embla);
-
-embla.on("select", disablePrevAndNextBtns);
-embla.on("init", disablePrevAndNextBtns);
-
 
 
