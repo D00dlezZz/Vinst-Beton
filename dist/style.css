@@ -531,6 +531,7 @@ video {
   height: 800%;
   position: absolute;
   width: 100%;
+  overflow: hidden;
 }
 
 .info__title {
