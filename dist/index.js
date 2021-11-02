@@ -51,6 +51,7 @@ aboutBtn.forEach((event) => {
         blockInfo.classList.add("active");
         overlay.style.display = "block";
         body.style.overflow = 'hidden';
+        document.querySelector('header').style.zIndex = "1"
 
         const zilImg = [
             "./img/item1.webp",
@@ -108,6 +109,7 @@ aboutBtn.forEach((event) => {
 
 
 closeBtn.addEventListener('click', () => {
+    document.querySelector('header').style.zIndex = "2"
     overlay.style.display = 'none',
     blockInfo.classList.remove("active");
     body.style.overflow = "scroll"
@@ -180,6 +182,7 @@ if (window.outerWidth < 768) {
     document.querySelectorAll(".mobile-seach").forEach((element) => {
         element.removeAttribute('href');
         element.addEventListener('click', () => {
+            document.querySelector('header').style.zIndex = "1"
             document.querySelector(".select").classList.add("activeNav");
             overlay.style.display = "block";
             body.style.overflow = 'hidden';
@@ -201,6 +204,7 @@ if (window.outerWidth < 768) {
     })
     
     document.getElementById('close').addEventListener("click", () => {
+        document.querySelector('header').style.zIndex = "2"
         document.querySelector(".select").classList.remove("activeNav");
         overlay.style.display = "none";
         body.style.overflow = 'scroll';
