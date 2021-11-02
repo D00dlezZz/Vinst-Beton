@@ -190,6 +190,28 @@ setupPrevNextBtns(prevBtn, nextBtn, embla);
 embla.on("select", disablePrevAndNextBtns);
 embla.on("init", disablePrevAndNextBtns);
 
+if (window.outerWidth < 768) {
+    document.querySelectorAll(".mobile-seach").forEach((element) => {
+        element.removeAttribute('href')
+        element.addEventListener('click', () => {
+            document.querySelector(".select").style.display = "flex"
+            overlay.style.display = "block";
+            body.style.overflow = 'hidden';
+
+            if (element.id === 'anino') {
+                document.querySelector(".yandex").setAttribute('href', 'https://yandex.ru/maps/213/moscow/house/ulitsa_kirpichnyye_vyyemki_14s4/Z04YcAZhSUcDQFtvfXl5cnRlYg==/?ll=37.611024%2C55.583866&z=16.87')
+                document.querySelector(".google").setAttribute('href', 'https://www.google.ru/maps/place/Кирпичные+Выемки+ул.,+14+строение+4,+Москва,+117535/@55.583847,37.6089293,17z/data=!3m1!4b1!4m5!3m4!1s0x414aadf4cb581e5b:0x6d1d7acbc587aa99!8m2!3d55.583844!4d37.611118?hl=ru')
+                document.querySelector(".navi").setAttribute('href', 'yandexnavi://build_route_on_map?lat_to=55.583866&lon_to=37.611024')
+            }
+        })
+    })
+    
+    document.getElementById('close').addEventListener("click", () => {
+        document.querySelector(".select").style.display = "none"
+        overlay.style.display = "none";
+        body.style.overflow = 'scroll';
+    })
+}
 
 
 
