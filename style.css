@@ -529,7 +529,7 @@ video {
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 1;
   height: 800%;
-  position: absolute;
+  position: fixed;
   width: 100%;
   overflow: hidden;
 }
