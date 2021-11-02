@@ -48,11 +48,9 @@ if (animItems.length > 0) {
 
 aboutBtn.forEach((event) => {
     event.addEventListener('click', () => {
-        html
         blockInfo.classList.add("active");
         overlay.style.display = "block";
         body.style.overflow = 'hidden';
-        body.style.position = "fixed";
         document.querySelector('header').style.zIndex = "1"
 
         const zilImg = [
@@ -115,7 +113,7 @@ closeBtn.addEventListener('click', () => {
     overlay.style.display = 'none',
     blockInfo.classList.remove("active");
     body.style.overflow = "scroll"
-    body.style.position = "static";
+
 })
 
 
@@ -127,14 +125,12 @@ dropdownBtn.addEventListener('click', () => {
         document.querySelector(".dropdown__list").classList.add("active");
         overlay.style.display = 'block';
         body.style.overflow = 'hidden';
-        body.style.position = "fixed";
         dropdownBtn.classList.remove("active");
 
     } else {
         document.querySelector(".dropdown__list").classList.remove("active");
         overlay.style.display = 'none'
         body.style.overflow = 'scroll';
-        body.style.position = "static";
         dropdownBtn.classList.add("active");
         document.querySelector(".input").checked = false;
 
@@ -191,7 +187,6 @@ if (window.outerWidth < 768) {
             document.querySelector(".select").classList.add("activeNav");
             overlay.style.display = "block";
             body.style.overflow = 'hidden';
-            body.style.position = "fixed";
     
             if (element.id === 'anino') {
                 document.querySelector(".yandex").setAttribute('href', 'https://yandex.ru/maps/213/moscow/house/ulitsa_kirpichnyye_vyyemki_14s4/Z04YcAZhSUcDQFtvfXl5cnRlYg==/?ll=37.611024%2C55.583866&z=16.87')
@@ -214,7 +209,6 @@ if (window.outerWidth < 768) {
         document.querySelector(".select").classList.remove("activeNav");
         overlay.style.display = "none";
         body.style.overflow = 'scroll';
-        body.style.position = "static";
     })
 }
 

@@ -10,7 +10,6 @@ body {
   background-color: #2f353d;
   font-family: "Montserrat", sans-serif;
   overflow: scroll;
-  position: relative;
 }
 
 ._anim-show {
@@ -41,6 +40,7 @@ header {
   padding: 0.16em 1.25em;
   background-color: #2f353d;
   z-index: 2;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   opacity: 0.9;
 }
@@ -79,7 +79,7 @@ header {
   position: relative;
   cursor: pointer;
   text-decoration: none;
-  color: #CBCBCB;
+  color: #cbcbcb;
   margin-right: 20px;
   font-style: normal;
   font-weight: 600;
@@ -105,7 +105,7 @@ header {
   font-style: normal;
   font-weight: 700;
   font-size: 0.7em;
-  color: #CBCBCB;
+  color: #cbcbcb;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   -webkit-transform: translate(0px, 120%);
   -ms-transform: translate(0px, 120%);
@@ -131,7 +131,7 @@ header {
   font-weight: 700;
   font-size: 0.7em;
   letter-spacing: 0.09em;
-  color: #CBCBCB;
+  color: #cbcbcb;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   -webkit-transform: translate(0px, 120%);
   -ms-transform: translate(0px, 120%);
@@ -164,7 +164,7 @@ header {
 .heading {
   letter-spacing: 0.025em;
   font-size: 0.5em;
-  color: #CBCBCB;
+  color: #cbcbcb;
   font-style: normal;
   font-weight: 600;
   margin-bottom: 10px;
@@ -172,7 +172,11 @@ header {
 
 .heading__container {
   opacity: 0;
+  -webkit-transform: translate(0px, 120%);
+  -ms-transform: translate(0px, 120%);
   transform: translate(0px, 120%);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
 }
 
@@ -201,7 +205,7 @@ header {
   -ms-flex-pack: center;
   justify-content: center;
   height: 3em;
-  color: #CBCBCB;
+  color: #cbcbcb;
   padding: 0.4em 0.3em 0.1em 0.1em;
 }
 
@@ -269,7 +273,7 @@ header {
 }
 
 .about__text {
-  color: #CBCBCB;
+  color: #cbcbcb;
   font-size: 0.4em;
   width: 50%;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -320,7 +324,7 @@ video {
 
 .info__item {
   margin: 0 auto;
-  color: #CBCBCB;
+  color: #cbcbcb;
   width: 30%;
   font-size: 0.4em;
   font-style: normal;
@@ -353,7 +357,7 @@ video {
   -ms-flex-align: center;
   align-items: center;
   height: 30vw;
-  color: #CBCBCB;
+  color: #cbcbcb;
   background: url(./img/backgrounds/production-bckg.webp) 100% 100% no-repeat;
   background-size: cover;
 }
@@ -388,7 +392,7 @@ video {
 .production__btn {
   display: block;
   cursor: pointer;
-  color: #CBCBCB;
+  color: #cbcbcb;
   font-size: 0.3em;
   border: none;
   text-decoration: none;
@@ -416,7 +420,11 @@ video {
   padding: 0.5em;
   overflow: auto;
   z-index: 2;
+  -webkit-transform: translate(0px, 100%);
+  -ms-transform: translate(0px, 100%);
   transform: translate(0px, 100%);
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   opacity: 0;
   pointer-events: none;
@@ -433,8 +441,6 @@ video {
   transition: all 0.8s ease 0.4s;
 }
 
-
-
 .embla {
   position: relative;
   background-color: #373b40;
@@ -442,7 +448,6 @@ video {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  
 }
 
 .embla__viewport {
@@ -452,15 +457,22 @@ video {
 
 .embla__viewport.is-draggable {
   cursor: move;
+  cursor: -webkit-grab;
   cursor: grab;
 }
 
 .embla__viewport.is-dragging {
+  cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
 .embla__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
@@ -472,7 +484,6 @@ video {
   position: relative;
   min-width: 50%;
   padding-left: 10px;
-  
 }
 
 .embla__slide__inner {
@@ -490,25 +501,33 @@ video {
   min-height: 100%;
   min-width: 100%;
   max-width: none;
+  -webkit-transform: translate(-55%, -55%);
+  -ms-transform: translate(-55%, -55%);
   transform: translate(-55%, -55%);
-
 }
 
 .embla__button {
   outline: 0;
   cursor: pointer;
   background-color: transparent;
+  -ms-touch-action: manipulation;
   touch-action: manipulation;
   position: absolute;
   z-index: 2;
   top: 40%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   border: 0;
   width: 30px;
   height: 30px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  fill: #CBCBCB;
+  fill: #cbcbcb;
   padding: 0;
 }
 
@@ -530,7 +549,6 @@ video {
   right: 0px;
 }
 
- 
 .overlay {
   display: none;
   position: absolute;
@@ -572,8 +590,7 @@ video {
   left: 0.3em;
   width: 0.3em;
   height: 4px;
-  background: #CBCBCB;
-  
+  background: #cbcbcb;
 }
 
 .closeBtn:before {
@@ -656,7 +673,11 @@ video {
   -webkit-box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
   opacity: 0;
+  -webkit-transform: translate(0px, 50%);
+  -ms-transform: translate(0px, 50%);
   transform: translate(0px, 50%);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
 }
 
@@ -732,10 +753,14 @@ footer {
 
 .footer__container {
   text-align: center;
-  color: #CBCBCB;
+  color: #cbcbcb;
   font-size: 0.4em;
   opacity: 0;
+  -webkit-transform: translate(0px, 100%);
+  -ms-transform: translate(0px, 100%);
   transform: translate(0px, 100%);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
 }
 
@@ -758,7 +783,7 @@ footer {
   display: block;
   cursor: pointer;
   text-decoration: underline;
-  color: #CBCBCB !important;
+  color: #cbcbcb !important;
 }
 
 .select {
@@ -809,7 +834,7 @@ footer {
 
   .info__item {
     margin: 0 auto;
-    color: #CBCBCB;
+    color: #cbcbcb;
     width: 45%;
     font-size: 0.5em;
     font-style: normal;
@@ -835,6 +860,8 @@ footer {
   }
 
   .dropdown__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: absolute;
     margin-left: auto;
@@ -854,7 +881,11 @@ footer {
     -ms-flex-pack: center;
     justify-content: center;
     z-index: 2;
+    -webkit-transform: translate(-100%, 0px);
+    -ms-transform: translate(-100%, 0px);
     transform: translate(-100%, 0px);
+    -webkit-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
     transition: all 0.2s ease 0s;
     opacity: 0;
     pointer-events: none;
@@ -868,6 +899,8 @@ footer {
     transform: translate(0px, 0px);
     -webkit-transition: all 0.8s ease 0.4s;
     -o-transition: all 0.8s ease 0.4s;
+    -webkit-transition: all 0.8s ease 0.1s;
+    -o-transition: all 0.8s ease 0.1s;
     transition: all 0.8s ease 0.1s;
   }
 
@@ -876,7 +909,7 @@ footer {
     font-size: 0.5em;
     font-weight: 600;
     padding-bottom: 1.6em;
-    color: #CBCBCB !important;
+    color: #cbcbcb !important;
   }
 
   .dropdown__btn {
@@ -908,7 +941,7 @@ footer {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #CBCBCB;
+    background: #cbcbcb;
     border-radius: 3px;
     z-index: 2;
     -webkit-transform-origin: 4px 0px;
@@ -922,6 +955,12 @@ footer {
       -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
       background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      opacity 0.55s ease,
+      -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      opacity 0.55s ease,
+      -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
       background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
@@ -946,7 +985,7 @@ footer {
     -webkit-transform: rotate(-45deg) translate(-2px, -3px);
     -ms-transform: rotate(-45deg) translate(-2px, -3px);
     transform: rotate(-45deg) translate(-2px, -3px);
-    background: #CBCBCB;
+    background: #cbcbcb;
   }
 
   .dropdown__btn input:checked ~ span:nth-last-child(2) {
@@ -981,7 +1020,7 @@ footer {
 
     .main__phone {
       font-size: 0.7em;
-      color: #CBCBCB !important;
+      color: #cbcbcb !important;
     }
 
     .heading {
@@ -1053,7 +1092,7 @@ footer {
 
     .info__item {
       margin: 0 auto;
-      color: #CBCBCB;
+      color: #cbcbcb;
       width: 100%;
       font-size: 0.7em;
       font-style: normal;
@@ -1113,7 +1152,11 @@ footer {
       -webkit-box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
       box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
       opacity: 0;
+      -webkit-transform: translate(0px, 50%);
+      -ms-transform: translate(0px, 50%);
       transform: translate(0px, 50%);
+      -webkit-transition: all 0.8s ease 0s;
+      -o-transition: all 0.8s ease 0s;
       transition: all 0.8s ease 0s;
     }
 
@@ -1130,7 +1173,11 @@ footer {
     .contacts__info {
       position: static;
       background-color: unset;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       padding-bottom: 0;
       width: 100%;
@@ -1145,6 +1192,8 @@ footer {
     }
 
     .select {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       position: relative;
       position: absolute;
@@ -1155,7 +1204,11 @@ footer {
       border-radius: 10px;
       top: 70%;
       z-index: 2;
+      -webkit-transform: translate(0px, -100%);
+      -ms-transform: translate(0px, -100%);
       transform: translate(0px, -100%);
+      -webkit-transition: all 0.4s ease 0s;
+      -o-transition: all 0.4s ease 0s;
       transition: all 0.4s ease 0s;
       opacity: 0;
       pointer-events: none;
@@ -1165,6 +1218,7 @@ footer {
       pointer-events: unset;
       opacity: 1;
       -ms-transform: translate(0px, 0px);
+      -webkit-transform: translate(0px, 0px);
       transform: translate(0px, 0px);
       -webkit-transition: all 0.4s ease 0.2s;
       -o-transition: all 0.4s ease 0.2s;
@@ -1172,15 +1226,28 @@ footer {
     }
 
     .select__container {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
       align-items: baseline;
       margin: 0 auto;
     }
 
     .item {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       width: 33.3%;
       height: 3em;
@@ -1188,11 +1255,11 @@ footer {
       margin-right: 10px;
       text-decoration: none;
     }
-    
-    .yandex__icon img{
+
+    .yandex__icon img {
       width: 1.5em;
     }
-    .google__icon img{
+    .google__icon img {
       width: 0.9em;
     }
 
@@ -1218,23 +1285,22 @@ footer {
       top: 0.3em;
       right: 0.6em;
     }
-    
+
     .close:before,
     .close:after {
       content: "";
       position: absolute;
       width: 0.5em;
       height: 4px;
-      background: #CBCBCB;
-      
+      background: #cbcbcb;
     }
-    
+
     .close:before {
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg);
     }
-    
+
     .close:after {
       -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
@@ -1254,4 +1320,3 @@ footer {
     }
   }
 }
-
