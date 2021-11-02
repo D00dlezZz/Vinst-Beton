@@ -10,6 +10,7 @@ body {
   background-color: #2f353d;
   font-family: "Montserrat", sans-serif;
   overflow: scroll;
+  position: relative;
 }
 
 ._anim-show {
@@ -533,13 +534,13 @@ video {
 .overlay {
   display: none;
   position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 2;
-  height: 800%;
+  height: 700%;
   position: absolute;
   width: 100%;
+  overflow: hidden;
 }
 
 .info__title {
