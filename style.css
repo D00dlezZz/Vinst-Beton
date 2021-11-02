@@ -1149,9 +1149,11 @@ footer {
       transform: translate(0px, -100%);
       transition: all 0.4s ease 0s;
       opacity: 0;
+      pointer-events: none;
     }
 
     .activeNav {
+      pointer-events: unset;
       opacity: 1;
       -ms-transform: translate(0px, 0px);
       transform: translate(0px, 0px);
