@@ -123,6 +123,10 @@ jQuery(document).ready(function ($) {
             scrollTop: $(anchor).offset().top - 60
         }, 1000);
     });
+    function slide() {
+        $(".embla__button--next").click();
+    }
+    setInterval(slide, 3000);
 });
 
 smoothLinks.forEach((element) => {
@@ -157,7 +161,8 @@ const prevBtn = wrap.querySelector(".embla__button--prev");
 const nextBtn = wrap.querySelector(".embla__button--next");
 const embla = EmblaCarousel(viewPort, {
   dragFree: true,
-  containScroll: "trimSnaps"
+  containScroll: "trimSnaps",
+  loop: true
 });
 const disablePrevAndNextBtns = disablePrevNextBtns(prevBtn, nextBtn, embla);
 
