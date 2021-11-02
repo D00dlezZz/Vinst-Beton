@@ -9,8 +9,6 @@ const dropdownBtn = document.getElementById('dropdown__btn');
 const animItems = document.querySelectorAll('._anim-items');
 const smoothLinks = document.querySelectorAll('.nav');
 
-
-
 if (animItems.length > 0) {
     window.addEventListener('scroll', animOnScroll);
     function animOnScroll() {
@@ -19,7 +17,6 @@ if (animItems.length > 0) {
             const animItemHeight = animItem.offsetHeight;
             const animItemOffset = offset(animItem).top;
             const animStart = 4;
-
 
             let animItemPoint = window.innerHeight - animItemHeight / animStart;
             if (animItemHeight > innerHeight) {
@@ -57,37 +54,50 @@ aboutBtn.forEach((event) => {
 
         const zilImg = [
             "./img/item1.webp",
-            "./img/item1.webp",
-            "./img/item1.webp",
-            "./img/item1.webp",
+            "./img/item2.webp",
+            "./img/item3.webp",
+            "./img/item4.webp",
             "./img/item1.webp",
         ]
-
-        const anImg = [
+        const aninoImg = [
             "./img/item2.webp",
+            "./img/item3.webp",
+            "./img/item4.webp",
             "./img/item2.webp",
-            "./img/item2.webp",
-            "./img/item2.webp",
-            "./img/item2.webp",
+            "./img/item1.webp",
         ]
-
-        const relImg = [
-            "./img/item3.webp",
-            "./img/item3.webp",
-            "./img/item3.webp",
-            "./img/item3.webp",
+        const reutovImg = [
+            "./img/item4.webp",
+            "./img/item4.webp",
+            "./img/item2.webp",
+            "./img/item1.webp",
             "./img/item3.webp",
         ]
 
         if (event.id === 'firstBtn') {
+            for(let index = 0; index < zilImg.length; index++) {
+                document.querySelectorAll(".embla__slide__img").forEach((el) => {
+                    el.setAttribute('src', zilImg[index++]) 
+                })
+            }
             infoTitle.innerText = "РБУ ЗИЛ: ул. Автозаводская 23, стр. 436";
             infoText.innerText = "Производственная площадка расположена в центре Москвы. Удобный выезд на ТТК и центральные автомагистрали Юга Москвы. На данной площадке расположены РБУ Liebherr и Elkon. Суммарная производительность которых составляет более 170 кубометров готовой продукции. Площадка включает большие склады сыпучих материалов. На площадке располагается собственная лаборатория и зона технического обслуживания своего парка АБС."
 
         } else if (event.id === 'secondBtn') {
+            for(let index = 0; index < aninoImg.length; index++) {
+                document.querySelectorAll(".embla__slide__img").forEach((el) => {
+                    el.setAttribute('src', aninoImg[index++]) 
+                })
+            }
             infoTitle.innerText = "РБУ АНИНО: Кирпичные Выемки д.14 к.4";
             infoText.innerText = "Производственная площадка расположена в центре Москвы. Удобный выезд на ТТК и центральные автомагистрали Юга Москвы. На данной площадке расположены РБУ Liebherr и Elkon. Суммарная производительность которых составляет более 170 кубометров готовой продукции. Площадка включает большие склады сыпучих материалов. На площадке располагается собственная лаборатория и зона технического обслуживания своего парка АБС."
 
         } else {
+            for(let index = 0; index < reutovImg.length; index++) {
+                document.querySelectorAll(".embla__slide__img").forEach((el) => {
+                    el.setAttribute('src', reutovImg[index++]) 
+                })
+            }
             infoTitle.innerText = "РБУ Реутов: г. Реутов, Проспект Мира д. 36А";
             infoText.innerText = "Производственная площадка расположена на востоке Москвы. Удобный выезда на МКАД и автомагистрали востока Москвы. На данной площадке расположены РБУ Stetter и Elkon. Суммарная производительность которых составляет более 110 кубометров в час готовой продукции. На данном производстве так же имеется собственная лаборатория. Здесь расположен крупный перевалочный узел нашей компании. Железнодорожный путь и большая территория площадки позволяют переваливать большие объемы цемента и сыпучих материалов."
         }
@@ -124,6 +134,20 @@ dropdownBtn.addEventListener('click', () => {
     }
 })
 
+jQuery(document).ready(function ($) {
+    $("a.nav").on("click", function (e) {
+        e.preventDefault();
+        var anchor = $(this).attr('href');
+        $('html, body').stop().animate({
+            scrollTop: $(anchor).offset().top - 60
+        }, 1000);
+    });
+    function slide() {
+        $(".embla__button--next").click();
+    }
+    setInterval(slide, 3000);
+});
+
 smoothLinks.forEach((element) => {
     element.addEventListener("click", () => {
         document.querySelector(".input").checked = false;
@@ -135,19 +159,37 @@ smoothLinks.forEach((element) => {
 })
 
 
-jQuery(document).ready(function ($) {
-    $("a.nav").on("click", function (e) {
-        e.preventDefault();
-        var anchor = $(this).attr('href');
-        $('html, body').stop().animate({
-            scrollTop: $(anchor).offset().top - 60
-        }, 1000);
-    });
-    $(".carousel.carousel-slider").carousel({
-        indicators: true,
-        fullWidth: true,
-        duration: 200
-    })
+const setupPrevNextBtns = (prevBtn, nextBtn, embla) => {
+    prevBtn.addEventListener('click', embla.scrollPrev, false);
+    nextBtn.addEventListener('click', embla.scrollNext, false);
+  };
+  
+const disablePrevNextBtns = (prevBtn, nextBtn, embla) => {
+    return () => {
+      if (embla.canScrollPrev()) prevBtn.removeAttribute('disabled');
+      else prevBtn.setAttribute('disabled', 'disabled');
+  
+      if (embla.canScrollNext()) nextBtn.removeAttribute('disabled');
+      else nextBtn.setAttribute('disabled', 'disabled');
+    };
+  };
+  
+const wrap = document.querySelector(".embla");
+const viewPort = wrap.querySelector(".embla__viewport");
+const prevBtn = wrap.querySelector(".embla__button--prev");
+const nextBtn = wrap.querySelector(".embla__button--next");
+const embla = EmblaCarousel(viewPort, {
+  dragFree: true,
+  containScroll: "trimSnaps",
+  loop: true
 });
+const disablePrevAndNextBtns = disablePrevNextBtns(prevBtn, nextBtn, embla);
+
+setupPrevNextBtns(prevBtn, nextBtn, embla);
+
+embla.on("select", disablePrevAndNextBtns);
+embla.on("init", disablePrevAndNextBtns);
+
+
 
 
