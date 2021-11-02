@@ -10,6 +10,8 @@ body {
   background-color: #2f353d;
   font-family: "Montserrat", sans-serif;
   overflow: scroll;
+  touch-action: auto;
+  -ms-touch-action: auto;
 }
 
 ._anim-show {
