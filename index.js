@@ -55,25 +55,25 @@ aboutBtn.forEach((event) => {
         document.querySelector('header').style.zIndex = "1"
 
         const zilImg = [
-            "./img/item1.webp",
-            "./img/item2.webp",
-            "./img/item3.webp",
-            "./img/item4.webp",
-            "./img/item1.webp",
+            "./img/itemsImg/item2.webp",
+            "./img/itemsImg/item3.webp",
+            "./img/itemsImg/item4.webp",
+            "./img/itemsImg/item1.webp",
+            "./img/itemsImg/item2.webp",
         ]
         const aninoImg = [
-            "./img/item2.webp",
-            "./img/item3.webp",
-            "./img/item4.webp",
-            "./img/item2.webp",
-            "./img/item1.webp",
+            "./img/itemsImg/item1.webp",
+            "./img/itemsImg/item2.webp",
+            "./img/itemsImg/item4.webp",
+            "./img/itemsImg/item3.webp",
+            "./img/itemsImg/item4.webp",
         ]
         const reutovImg = [
-            "./img/item4.webp",
-            "./img/item4.webp",
-            "./img/item2.webp",
-            "./img/item1.webp",
-            "./img/item3.webp",
+            "./img/itemsImg/item1.webp",
+            "./img/itemsImg/item3.webp",
+            "./img/itemsImg/item4.webp",
+            "./img/itemsImg/item3.webp",
+            "./img/itemsImg/item1.webp",
         ]
 
         if (event.id === 'firstBtn') {
