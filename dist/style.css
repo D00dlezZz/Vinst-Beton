@@ -769,14 +769,14 @@ iframe {
 }
 
 footer {
-  padding: 1em 0 0.7em 1em;
+  padding: 0.7em 0 0.7em 1em;
   background-color: #333333;
 }
 
 .footer__container {
   text-align: center;
   color: #ffffff;
-  font-size: 0.4em;
+  font-size: 0.2em;
 }
 
 .footer__container p {
