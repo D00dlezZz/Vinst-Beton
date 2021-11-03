@@ -1018,9 +1018,20 @@ footer {
     .header__menu {
       display: none;
     }
+    .main__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* margin: 0 auto; */
+    }
 
     .main__text {
       font-size: 1.3em;
+    }
+
+    .main__about {
+      text-align: center;
     }
 
     .main__phone {
