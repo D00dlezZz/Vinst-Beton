@@ -132,7 +132,15 @@ header {
   transform: translate(0px, 0px);
 }
 
+.main__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .main__about {
+  text-align: center;
   font-weight: 600;
   font-size: 0.3em;
   color: #ffffff;
@@ -162,7 +170,7 @@ header {
   padding-top: 10px;
   font-style: normal;
   font-weight: 600;
-  font-size: 0.3em;
+  font-size: 0.4em;
   color: #ffffff;
   -webkit-transform: translate(0px, 120%);
   -ms-transform: translate(0px, 120%);
@@ -182,6 +190,10 @@ header {
   -webkit-transition: all 0.8s ease 0.7s;
   -o-transition: all 0.8s ease 0.7s;
   transition: all 0.8s ease 0.7s;
+}
+
+.main__phone {
+  color: #2F4E76;
 }
 
 .services {
@@ -700,9 +712,11 @@ video {
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
+  pointer-events: none;
 }
 
 .contacts__info._active {
+  pointer-events: unset;
   opacity: 1;
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
@@ -1019,19 +1033,8 @@ footer {
       display: none;
     }
     
-    .main__info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
     .main__text {
       font-size: 1.3em;
-    }
-
-    .main__about {
-      text-align: center;
     }
 
     .main__phone {
@@ -1157,26 +1160,8 @@ footer {
       width: 100%;
       min-height: 7em;
       background-color: #ffffff;
-      border-radius: 10px;
       -webkit-box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
       box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
-      opacity: 0;
-      -webkit-transform: translate(100%, 0px);
-      -ms-transform: translate(100%, 0px);
-      transform: translate(100%, 0px);
-      -webkit-transition: all 0.8s ease 0s;
-      -o-transition: all 0.8s ease 0s;
-      transition: all 0.8s ease 0s;
-    }
-
-    .contacts__container._active {
-      opacity: 1;
-      -webkit-transform: translate(0px, 0px);
-      -ms-transform: translate(0px, 0px);
-      transform: translate(0px, 0px);
-      -webkit-transition: all 0.8s ease 0.4s;
-      -o-transition: all 0.8s ease 0.4s;
-      transition: all 0.8s ease 0.4s;
     }
 
     .contacts__info {
