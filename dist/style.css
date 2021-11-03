@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #2f353d;
+  background-color: #ffffff;
   font-family: "Montserrat", sans-serif;
   overflow: scroll;
   touch-action: auto;
@@ -40,11 +40,11 @@ header {
   position: sticky;
   top: 0;
   padding: 0.16em 1.25em;
-  background-color: #2f353d;
+  background-color: #333333;
   z-index: 2;
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .header__container {
@@ -81,10 +81,10 @@ header {
   position: relative;
   cursor: pointer;
   text-decoration: none;
-  color: #cbcbcb;
+  color: #ffff;
   margin-right: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.2em;
 }
 
@@ -93,9 +93,10 @@ header {
 }
 
 .main {
-  background: url(./img/backgrounds/main-bckg.png) 100% 100% no-repeat;
+  background: url(./img/Mask_Group.jpg) 100% 100% no-repeat;
   background-size: cover;
   padding: 1.7em 1em;
+  height: 90vh;
 }
 
 .main-container {
@@ -106,8 +107,8 @@ header {
   text-align: center;
   font-style: normal;
   font-weight: 700;
-  font-size: 0.7em;
-  color: #cbcbcb;
+  font-size: 2em;
+  color: #ffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   -webkit-transform: translate(0px, 120%);
   -ms-transform: translate(0px, 120%);
@@ -160,15 +161,15 @@ header {
 
 .line {
   width: 5em;
-  border: 5px solid #1c4472;
+  border: 3px solid #2F4E76;
 }
 
 .heading {
   letter-spacing: 0.025em;
   font-size: 0.5em;
-  color: #cbcbcb;
+  color: #000000;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 
@@ -207,7 +208,7 @@ header {
   -ms-flex-pack: center;
   justify-content: center;
   height: 3em;
-  color: #cbcbcb;
+  color: #333333;
   padding: 0.4em 0.3em 0.1em 0.1em;
 }
 
@@ -259,7 +260,7 @@ header {
 }
 
 .text {
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
   font-size: 0.17em;
 }
 
@@ -275,10 +276,9 @@ header {
 }
 
 .about__text {
-  color: #cbcbcb;
+  color: #333333;
   font-size: 0.4em;
   width: 50%;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .about__video {
@@ -301,17 +301,7 @@ video {
 
 .info {
   padding: 1em 3em;
-  background: -o-radial-gradient(
-    50% 47.35%,
-    100% 47.32%,
-    #797979 0%,
-    #2f353d 100%
-  );
-  background: radial-gradient(
-    100% 47.32% at 50% 47.35%,
-    #797979 0%,
-    #2f353d 100%
-  );
+  background-color: #333333;
 }
 
 .info__container {
@@ -326,11 +316,11 @@ video {
 
 .info__item {
   margin: 0 auto;
-  color: #cbcbcb;
+  color: #ffffff;
   width: 30%;
   font-size: 0.4em;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   -webkit-transform: translate(0px 50%);
   -ms-transform: translate(0px 50%);
   transform: translate(0px 50%);
@@ -359,7 +349,7 @@ video {
   -ms-flex-align: center;
   align-items: center;
   height: 30vw;
-  color: #cbcbcb;
+  color: #333333;
   background: url(./img/backgrounds/production-bckg.webp) 100% 100% no-repeat;
   background-size: cover;
 }
@@ -394,7 +384,7 @@ video {
 .production__btn {
   display: block;
   cursor: pointer;
-  color: #cbcbcb;
+  color: #333333;
   font-size: 0.3em;
   border: none;
   text-decoration: none;
@@ -404,6 +394,7 @@ video {
 
 .production__btn:hover {
   text-decoration: underline;
+  color: #2F4E76;
 }
 
 .production__info {
@@ -416,7 +407,7 @@ video {
   position: fixed;
   width: 90vw;
   height: 8em;
-  background-color: #373b40;
+  background-color: #ffffff;
   border: none;
   border-radius: 10px;
   padding: 0.5em;
@@ -445,7 +436,7 @@ video {
 
 .embla {
   position: relative;
-  background-color: #373b40;
+  background-color: #ffffff;
   padding: 0.5em 0.5em 0px 0.5em;
   max-width: 100%;
   margin-left: auto;
@@ -529,7 +520,7 @@ video {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  fill: #cbcbcb;
+  fill: #333333;
   padding: 0;
 }
 
@@ -581,7 +572,7 @@ video {
   height: 25px;
   cursor: pointer;
   border: none;
-  background-color: #373b40;
+  background-color: #ffffff;
 }
 
 .closeBtn:before,
@@ -592,7 +583,7 @@ video {
   left: 0.3em;
   width: 0.3em;
   height: 4px;
-  background: #cbcbcb;
+  background: #333333;
 }
 
 .closeBtn:before {
@@ -641,6 +632,7 @@ video {
   height: 187px;
   border-radius: 10px;
   background-color: #ffffff;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
@@ -755,7 +747,7 @@ footer {
 
 .footer__container {
   text-align: center;
-  color: #cbcbcb;
+  color: #333333;
   font-size: 0.4em;
   opacity: 0;
   -webkit-transform: translate(0px, 100%);
@@ -785,7 +777,7 @@ footer {
   display: block;
   cursor: pointer;
   text-decoration: underline;
-  color: #cbcbcb !important;
+  color: #333333 !important;
 }
 
 .select {
