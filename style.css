@@ -95,7 +95,7 @@ header {
 
 .main {
   display: flex;
-  background: url(./img/backgrounds/1.92\ \(2\).JPG) 100% 100% no-repeat;
+  background: url(./img/backgrounds/main-bckgrnd.JPG) 100% 100% no-repeat;
   background-size: cover;
   padding: 1.7em 1em;
   height: 90vh;
@@ -110,7 +110,6 @@ header {
 }
 
 .main__text {
-  /* font-family: Mukta; */
   text-align: start;
   font-weight: 500;
   font-size: 2em;
@@ -192,7 +191,7 @@ header {
   transition: all 0.8s ease 0.7s;
 }
 
-.main__phone {
+.main__phone:hover {
   color: #2F4E76;
 }
 
