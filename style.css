@@ -133,7 +133,7 @@ header {
 }
 
 .main__about {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.3em;
   color: #ffffff;
   -webkit-transform: translate(0px, 120%);
@@ -161,7 +161,7 @@ header {
   text-align: start;
   padding-top: 10px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.3em;
   color: #ffffff;
   -webkit-transform: translate(0px, 120%);
@@ -707,9 +707,9 @@ video {
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
-  -webkit-transition: all 0.8s ease 0.4s;
-  -o-transition: all 0.8s ease 0.4s;
-  transition: all 0.8s ease 0.4s;
+  -webkit-transition: all 0.8s ease 0.6s;
+  -o-transition: all 0.8s ease 0.6s;
+  transition: all 0.8s ease 0.6s;
 }
 
 .contacts__main-info p {
@@ -777,23 +777,6 @@ footer {
   text-align: center;
   color: #ffffff;
   font-size: 0.4em;
-  opacity: 0;
-  -webkit-transform: translate(0px, 100%);
-  -ms-transform: translate(0px, 100%);
-  transform: translate(0px, 100%);
-  -webkit-transition: all 0.8s ease 0s;
-  -o-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
-}
-
-.footer__container._active {
-  opacity: 1;
-  -webkit-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate(0px, 0px);
-  -webkit-transition: all 0.8s ease 0.4s;
-  -o-transition: all 0.8s ease 0.4s;
-  transition: all 0.8s ease 0.4s;
 }
 
 .footer__container p {
@@ -963,7 +946,7 @@ footer {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #cbcbcb;
+    background: #ffffff;
     border-radius: 3px;
     z-index: 2;
     -webkit-transform-origin: 4px 0px;
@@ -1007,7 +990,7 @@ footer {
     -webkit-transform: rotate(-45deg) translate(-2px, -3px);
     -ms-transform: rotate(-45deg) translate(-2px, -3px);
     transform: rotate(-45deg) translate(-2px, -3px);
-    background: #cbcbcb;
+    background: #ffffff;
   }
 
   .dropdown__btn input:checked ~ span:nth-last-child(2) {
