@@ -955,8 +955,8 @@ footer {
 
   .dropdown__btn span {
     display: block;
-    width: 33px;
-    height: 4px;
+    width: 30px;
+    height: 3px;
     margin-bottom: 5px;
     position: relative;
     background: #ffffff;
@@ -1033,11 +1033,16 @@ footer {
     }
     
     .main__text {
-      font-size: 1.3em;
+      font-size: 1.2em;
+    }
+
+    .main__about {
+      padding-top: 0.2em;
+      font-size: 0.4em;
     }
 
     .main__phone {
-      font-size: 0.4em;
+      font-size: 0.5em;
       color: #ffffff !important;
     }
 
@@ -1301,7 +1306,11 @@ footer {
     }
 
     footer {
-      padding: 0.6em;
+      padding: 0.4em;
+    }
+  
+    .footer__container {
+      font-size: 0.4em;
     }
 
     .pad {
