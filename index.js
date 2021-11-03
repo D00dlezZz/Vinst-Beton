@@ -173,9 +173,9 @@ const viewPort = wrap.querySelector(".embla__viewport");
 const prevBtn = wrap.querySelector(".embla__button--prev");
 const nextBtn = wrap.querySelector(".embla__button--next");
 const embla = EmblaCarousel(viewPort, {
+  loop: true,
   dragFree: true,
   containScroll: "trimSnaps",
-  loop: true
 });
 const disablePrevAndNextBtns = disablePrevNextBtns(prevBtn, nextBtn, embla);
 
