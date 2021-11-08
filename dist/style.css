@@ -90,15 +90,25 @@ header {
 
 .header__item:hover {
   bottom: 2px;
-  left: 2px;
+}
+
+.header__item.phone {
+  font-size: 0.27em;
+  margin: 0;
+}
+
+.header__item.phone:hover {
+  bottom: 0;
+  left: 0;
+  color: #2F4E76;
 }
 
 .main {
   display: flex;
-  background: url(./img/backgrounds/main-bckgrnd.JPG) 100% 100% no-repeat;
+  background: url(./img/backgrounds/fec9f70990d49ccb67bbea0dc2ff9158.JPG) 100% 100% no-repeat;
   background-size: cover;
   padding: 1.7em 1em;
-  height: 90vh;
+  height: 95vh;
 }
 
 .main-container {
@@ -164,35 +174,7 @@ header {
 }
 
 .main__phone {
-  display: block;
-  text-align: start;
-  padding-top: 10px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 0.4em;
-  color: #ffffff;
-  -webkit-transform: translate(0px, 120%);
-  -ms-transform: translate(0px, 120%);
-  transform: translate(0px, 120%);
-  opacity: 0;
-  -webkit-transition: all 0.8s ease 0s;
-  -o-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.main__phone._active {
-  opacity: 1;
-  -webkit-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate(0px, 0px);
-  -webkit-transition: all 0.8s ease 0.7s;
-  -o-transition: all 0.8s ease 0.7s;
-  transition: all 0.8s ease 0.7s;
-}
-
-.main__phone:hover {
-  color: #2F4E76;
+  display: none;
 }
 
 .services {
@@ -247,7 +229,7 @@ header {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: start;
-  align-items: center;
+  align-items: flex-end;
   height: 3em;
   margin: 0.4em 0.3em 0.1em 0.1em;
   border-radius: 10px;
@@ -1018,8 +1000,37 @@ footer {
     -ms-transform: rotate(45deg) translate(0, 0);
     transform: rotate(45deg) translate(0, 0);
   }
+  .main__phone {
+    display: block;
+    text-align: start;
+    padding-top: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.4em;
+    color: #ffffff;
+    -webkit-transform: translate(0px, 120%);
+    -ms-transform: translate(0px, 120%);
+    transform: translate(0px, 120%);
+    opacity: 0;
+    -webkit-transition: all 0.8s ease 0s;
+    -o-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+  }
+  
+  .main__phone._active {
+    opacity: 1;
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    -webkit-transition: all 0.8s ease 0.7s;
+    -o-transition: all 0.8s ease 0.7s;
+    transition: all 0.8s ease 0.7s;
+  }
 
   @media screen and (max-width: 767px) {
+
     body {
       position: relative;
     }
@@ -1070,7 +1081,7 @@ footer {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
-      padding: 0 0.4em;
+      padding: 0.2em 0.4em;
     }
 
     .item__img {
