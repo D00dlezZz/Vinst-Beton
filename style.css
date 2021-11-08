@@ -648,8 +648,8 @@ video {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 371px;
-  height: 187px;
+  width: 300px;
+  height: 150px;
   border-radius: 10px;
   background-color: #ffffff;
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -1041,6 +1041,10 @@ footer {
 
     .header__menu {
       display: none;
+    }
+    .main {
+      background: url(./img/backgrounds/fec9f70990d49ccb67bbea0dc2ff9158-2.jpg) 100% 100% no-repeat;
+      background-size: cover;
     }
     
     .main__text {
