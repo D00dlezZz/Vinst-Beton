@@ -342,6 +342,8 @@ header {
 }
 
 video {
+  margin-top: 10%;
+  margin-left: 5%;
   width: 90%;
   height: 60%;
 }
@@ -354,7 +356,7 @@ video {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 0.09em;
-  padding-bottom: 9em;
+  padding-top: 4em;
   
 } 
 
@@ -871,7 +873,12 @@ footer {
   }
 
   video {
+    margin-top: 0;
     margin-left: 5%;
+  }
+
+  .select__video {
+    font-size: 0.2em;
   }
 
   .info__container {
@@ -1165,7 +1172,7 @@ footer {
     }
 
     .videoBtn {
-      font-size: 4em;
+      font-size: 2.3em;
     }
 
     .info {
