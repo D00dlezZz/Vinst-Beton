@@ -354,15 +354,15 @@ video {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
+          justify-content: space-between;
   font-size: 0.09em;
   padding-top: 4em;
-  
+  width: 80%;
+  margin: 0 auto;  
 } 
 
 .videoBtn {
   cursor: pointer;
-  margin-right: 2em;
 }
 
 .videoBtn:hover {
@@ -683,7 +683,7 @@ video {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 2000px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-top: 20px;
 }
