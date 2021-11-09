@@ -82,10 +82,10 @@ header {
   cursor: pointer;
   text-decoration: none;
   color: #ffff;
-  margin-right: 20px;
   font-style: normal;
   font-weight: 400;
   font-size: 0.2em;
+  margin-left: 20px;
 }
 
 .header__item:hover {
@@ -93,7 +93,8 @@ header {
 }
 
 .header__item.phone {
-  font-size: 0.27em;
+  font-size: 0.28em;
+  letter-spacing: 1.5px;
   margin: 0;
 }
 
@@ -302,9 +303,10 @@ header {
 }
 
 .about__video {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -312,11 +314,30 @@ header {
   -ms-flex-pack: center;
   justify-content: center;
   width: 50%;
+  outline: none;
 }
 
 video {
   width: 90%;
-  height: 80%;
+  height: 60%;
+}
+
+.select__video {
+  display: flex;
+  justify-content: center;
+  font-size: 0.09em;
+  padding-bottom: 9em;
+  
+} 
+
+.videoBtn {
+  cursor: pointer;
+  margin-right: 2em;
+}
+
+.videoBtn:hover {
+  text-decoration: underline;
+  color: #2F4E76;
 }
 
 .info {
@@ -715,7 +736,6 @@ video {
 .contacts__main-info a {
   display: block;
   cursor: pointer;
-  text-decoration: underline;
   color: #000000 !important;
 }
 
@@ -782,7 +802,6 @@ footer {
 .footer__container a {
   display: block;
   cursor: pointer;
-  text-decoration: underline;
   color: #ffffff !important;
 }
 
