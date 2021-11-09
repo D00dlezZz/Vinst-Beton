@@ -1131,6 +1131,10 @@ footer {
       height: 100%;
     }
 
+    .videoBtn {
+      font-size: 4em;
+    }
+
     .info {
       padding: 2em 2em;
     }
