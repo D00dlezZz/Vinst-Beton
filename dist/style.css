@@ -1195,6 +1195,12 @@ footer {
       padding: 0.2em;
     }
 
+    .partners__item {
+      width: 100px;
+      height: 50px;
+      border-radius: 5px;
+    }
+
     iframe {
       display: none;
     }

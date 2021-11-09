@@ -9,6 +9,23 @@ const dropdownBtn = document.getElementById('dropdown__btn');
 const animItems = document.querySelectorAll('._anim-items');
 const smoothLinks = document.querySelectorAll('.nav');
 
+
+jQuery(document).ready(function ($) {
+    $("a.nav").on("click", function (e) {
+        e.preventDefault();
+        var anchor = $(this).attr('href');
+        $('html, body').stop().animate({
+            scrollTop: $(anchor).offset().top - 60
+        }, 1000);
+    });
+    function slide() {
+        $(".embla__button--next").click();
+    }
+    setInterval(slide, 3000);
+    
+});
+
+
 if (animItems.length > 0) {
     window.addEventListener('scroll', animOnScroll);
     function animOnScroll() {
@@ -237,19 +254,7 @@ document.querySelectorAll(".videoBtn").forEach((element) => {
 })
 
 
-jQuery(document).ready(function ($) {
-    $("a.nav").on("click", function (e) {
-        e.preventDefault();
-        var anchor = $(this).attr('href');
-        $('html, body').stop().animate({
-            scrollTop: $(anchor).offset().top - 60
-        }, 1000);
-    });
-    function slide() {
-        $(".embla__button--next").click();
-    }
-    setInterval(slide, 3000);
-    
-});
+
+
 
 
