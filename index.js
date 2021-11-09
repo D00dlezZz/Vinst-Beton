@@ -220,6 +220,23 @@ if (window.outerWidth < 768) {
 }
 
 
+document.querySelectorAll(".videoBtn").forEach((element) => {
+    element.addEventListener("click", () => {
+        document.querySelector("video").pause()
+        document.querySelector("video").removeAttribute('src')
+        if(element.id === "firstV") {
+            document.querySelector("video").setAttribute('src', "./video/Простройтех на выставке BAUMA CTT.mp4")
+            document.querySelector("video").load()
+            document.querySelector("video").play()
+        }else if(element.id === "secondV") {
+            document.querySelector(".video").setAttribute('src', "./video/SCANIA_MST_2020.12.17-2.mp4")
+            document.querySelector("video").load()
+            document.querySelector("video").play()
+        }
+    })
+})
+
+
 jQuery(document).ready(function ($) {
     $("a.nav").on("click", function (e) {
         e.preventDefault();
@@ -232,6 +249,7 @@ jQuery(document).ready(function ($) {
         $(".embla__button--next").click();
     }
     setInterval(slide, 3000);
+    
 });
 
 
