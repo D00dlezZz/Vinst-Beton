@@ -110,7 +110,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url(./img/backgrounds/fec9f70990d49ccb67bbea0dc2ff9158.JPG) 100% 100% no-repeat;
+  background: url(./img/backgrounds/main-bckgrd.JPG) 100% 100% no-repeat;
   background-size: cover;
   padding: 1.7em 1em;
   height: 95vh;
@@ -562,8 +562,8 @@ video {
   top: 50%;
   left: 50%;
   width: auto;
-  min-height: 100%;
-  min-width: 100%;
+  height: 100%;
+  width: 100%;
   max-width: none;
   -webkit-transform: translate(-55%, -55%);
   -ms-transform: translate(-55%, -55%);
@@ -1106,7 +1106,7 @@ footer {
       display: none;
     }
     .main {
-      background: url(./img/backgrounds/fec9f70990d49ccb67bbea0dc2ff9158-2.jpg) 100% 100% no-repeat;
+      background: url(./img/backgrounds/mobile-bckgrd.jpg) 100% 100% no-repeat;
       background-size: cover;
     }
     
