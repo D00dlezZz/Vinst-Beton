@@ -71,6 +71,9 @@ aboutBtn.forEach((event) => {
         body.style.touchAction = "none";
         document.querySelector('header').style.zIndex = "1"
 
+
+        // Подставить путь к картинкам для карусели
+
         const zilImg = [
             "./img/itemsImg/item2.jpg",
             "./img/itemsImg/item3.jpg",
@@ -236,11 +239,11 @@ if (window.outerWidth < 768) {
     })
 }
 
-
 document.querySelectorAll(".videoBtn").forEach((element) => {
     element.addEventListener("click", () => {
         document.querySelector("video").pause()
         document.querySelector("video").removeAttribute('src')
+        // Подставить ссылки на видео
         if(element.id === "firstV") {
             document.querySelector("video").setAttribute('src', "./video/Простройтех на выставке BAUMA CTT.mp4")
             document.querySelector("video").load()
